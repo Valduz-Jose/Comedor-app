@@ -8,6 +8,6 @@ class RegistroController extends Controller
 {
     public function __invoke()
     {
-        return "Registros";
+        return view('Registro');
     }
 }

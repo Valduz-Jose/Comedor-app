@@ -15,8 +15,7 @@ use App\Http\Controllers\EstadisticController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
+//Rutas a mis Paginas
 Route::get('/', HomeController::class);
 Route::get('/Registros', RegistroController::class);
 Route::get('/Estadisticas', EstadisticController::class);

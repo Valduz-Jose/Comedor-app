@@ -8,6 +8,6 @@ class EstadisticController extends Controller
 {
     public function __invoke()
     {
-        return "Estadisticas";
+        return view('Estadistic');
     }
 }
