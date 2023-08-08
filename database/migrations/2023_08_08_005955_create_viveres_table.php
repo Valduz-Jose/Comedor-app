@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('viveres', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name', 50);
             $table->decimal('cantidad', 10, 2); // Decimal con 10 dígitos y 2 decimales
             $table->string('unidad_medida'); // Puede ser kilos, litros, etc. 
             $table->timestamps();
