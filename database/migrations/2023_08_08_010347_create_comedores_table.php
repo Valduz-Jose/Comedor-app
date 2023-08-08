@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('comedores', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 50);
             $table->date('fecha');
             $table->integer('platos_servidos_diarios')->default(0); // Inicializado a 0
             $table->integer('platos_acumulados')->default(0); // Inicializado a 0        
