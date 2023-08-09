@@ -13,12 +13,13 @@ class personaSeeder extends Seeder
      */
     public function run(): void
     {
-        $persona = new persona;
-        $persona->name = "Pedro";
-        $persona->edad = 18;
-        $persona->sexo = "Masculino";
-        $persona->fecha_nacimiento = "1999-03-18";
-        $persona->ruta_foto = "Dowloads\Pedro";
-        $persona->save();
+        persona::factory(50)->create();
+        // $persona = new persona;
+        // $persona->name = "Pedro";
+        // $persona->edad = 18;
+        // $persona->sexo = "Masculino";
+        // $persona->fecha_nacimiento = "1999-03-18";
+        // $persona->ruta_foto = "Dowloads\Pedro";
+        // $persona->save();
     }
 }
