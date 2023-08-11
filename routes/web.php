@@ -17,6 +17,6 @@ use App\Http\Controllers\EstadisticController;
 */
 
 //Rutas a mis Paginas
-Route::get('/', HomeController::class);
-Route::get('/Registros', RegistroController::class);
-Route::get('/Estadisticas', EstadisticController::class);
+Route::get('/', HomeController::class)->name('Home');
+Route::get('/Registros', RegistroController::class)->name('Regis');
+Route::get('/Estadisticas', EstadisticController::class)->name('Estadis');
