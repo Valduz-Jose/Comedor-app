@@ -3,10 +3,13 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+
 
 class User extends Authenticatable
 {
@@ -42,4 +45,26 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    protected function name(): Attribute
+    {
+        return new Attribute(
+            //Accesor->Transforma la representacion del registro
+            get: fn ($value) => ucwords($value),
+
+            //Mutador
+            set: fn ($value) => strtolower($value)
+        );
+
+        // return new Attribute(
+        //     //Accesor->Transforma la representacion del registro
+        //     get: function ($value) {
+        //         return ucwords($value);
+        //     },
+        //     //Mutador
+        //     set: function ($value) {
+        //         return strtolower($value);
+        //     }
+        // );
+    }
 }
